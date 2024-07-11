@@ -1,6 +1,6 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["planck/rev6_drop", "Cicatrice"]
+        ["planck/rev6_drop", "geo"]
     ]
 }
