@@ -16,14 +16,33 @@
 
 #pragma once
 
-#undef TEMPO_DEFAULT
-#define TEMPO_DEFAULT 180
-#define ZELDA_PUZZLE Q__NOTE(_G5),     Q__NOTE(_FS5),    Q__NOTE(_DS5),     Q__NOTE(_A4),    Q__NOTE(_GS4),     Q__NOTE(_E5),     Q__NOTE(_GS5),     HD_NOTE(_C6),
+// #undef TEMPO_DEFAULT
+// #define TEMPO_DEFAULT 180
+// #define ZELDA_PUZZLE Q__NOTE(_G5),     Q__NOTE(_FS5),    Q__NOTE(_DS5),     Q__NOTE(_A4),    Q__NOTE(_GS4),     Q__NOTE(_E5),     Q__NOTE(_GS5),     HD_NOTE(_C6),
 // #define USB_SUSPEND_WAKEUP_DELAY 200
-#define AUDIO_INIT_DELAY
-#ifdef AUDIO_ENABLE
-#define STARTUP_SONG SONG(ZELDA_PUZZLE)
-#endif
+// #define AUDIO_INIT_DELAY
+// #ifdef AUDIO_ENABLE
+// #define STARTUP_SONG SONG(QWERTY)
+// #define STARTUP_SONG SONG(ZELDA_PUZZLE)
+// #endif
+
+#define TAPPING_TOGGLE 2
+
+// #define RGBLIGHT_LAYERS
+
+// #define RGBLIGHT_LED_COUNT 9
+// #define RGBLIGHT_EFFECT_TWINKLE
+// #define RGBLIGHT_EFFECT_BREATHING
+// #define RGBLIGHT_EFFECT_KNIGHT
+
+// #define RGBLIGHT_DEFAULT_SPD 120
+
+// #define RGBLIGHT_SLEEP
+
+#define BOOTMAGIC_ROW 0
+#define BOOTMAGIC_COLUMN 1
+
+#define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX
 
 /*
  * MIDI options
@@ -33,7 +52,7 @@
    - MIDI notes can be sent when in Music mode is on
 */
 
-#define MIDI_BASIC
+// #define MIDI_BASIC
 
 /* enable advanced MIDI features:
    - MIDI notes can be added to the keymap

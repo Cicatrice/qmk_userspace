@@ -1,4 +1,10 @@
-AUDIO_ENABLE = yes
+AUDIO_ENABLE = no 
+# RGBLIGHT_ENABLE = yes
+BOOTMAGIC_ENABLE = yes
+UNICODE_COMMON = yes
+UNICODEMAP_ENABLE = yes
+RGB_MATRIX_ENABLE = no
+RGBLIGHT_ENABLE = no
 
 ifeq ($(strip $(AUDIO_ENABLE)), yes)
     SRC += muse.c

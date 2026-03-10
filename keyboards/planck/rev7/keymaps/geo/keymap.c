@@ -61,41 +61,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
-// void keyboard_post_init_user(void) {
-//   rgblight_enable_noeeprom();
-//   layer_clear();
-//   layer_on(_QWERTY);
-// }
+void keyboard_post_init_user(void) {
+  rgblight_enable_noeeprom();
+  layer_clear();
+  layer_on(_QWERTY);
+}
 
-// layer_state_t default_layer_state_set_user(layer_state_t state) {
-//   rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
-//   rgblight_sethsv_noeeprom(HSV_WHITE);
-//   return state;
-// }
+layer_state_t default_layer_state_set_user(layer_state_t state) {
+  rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+  rgblight_sethsv_noeeprom(HSV_WHITE);
+  return state;
+}
 
-// layer_state_t layer_state_set_user(layer_state_t state) {
-//     float my_song[][2] = SONG(QWERTY_SOUND);
-//     switch (get_highest_layer(state)) {
-//     case _RAISE:
-//         rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING+3);
-//         rgblight_sethsv_noeeprom(HSV_CYAN);
-//         break;
-//     case _LOWER:
-//         rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING+3);
-//         rgblight_sethsv_noeeprom(HSV_TURQUOISE);
-//         break;
-//     case _NUMPAD:
-//         PLAY_SONG(my_song);
-//         rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
-//         rgblight_sethsv_noeeprom(HSV_GOLD);
-//         break;
-//     case _SYS:
-//         rgblight_mode_noeeprom(RGBLIGHT_MODE_KNIGHT+2);
-//         rgblight_sethsv_noeeprom(HSV_RED);
-//         break;
-//     default:
-//         default_layer_state_set_user(state);
-//         break;
-//     }
-//   return state;
-// }
+layer_state_t layer_state_set_user(layer_state_t state) {
+    float my_song[][2] = SONG(QWERTY_SOUND);
+    switch (get_highest_layer(state)) {
+    case _RAISE:
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING+3);
+        rgblight_sethsv_noeeprom(HSV_CYAN);
+        break;
+    case _LOWER:
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING+3);
+        rgblight_sethsv_noeeprom(HSV_TURQUOISE);
+        break;
+    case _NUMPAD:
+        PLAY_SONG(my_song);
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+        rgblight_sethsv_noeeprom(HSV_GOLD);
+        break;
+    case _SYS:
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_KNIGHT+2);
+        rgblight_sethsv_noeeprom(HSV_RED);
+        break;
+    default:
+        default_layer_state_set_user(state);
+        break;
+    }
+  return state;
+}
